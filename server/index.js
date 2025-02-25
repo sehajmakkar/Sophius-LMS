@@ -9,6 +9,8 @@ import hpp from "hpp";
 import cookieParser from "cookie-parser";
 import cors from 'cors'
 
+import healthRouter from "./routes/health.routes.js";
+
 const app = express();
 
 const PORT = process.env.PORT || 8000;
@@ -65,7 +67,7 @@ app.use(cors({
 
 
 // API Routes
-
+app.use("/health", healthRouter);
 
 
 // 404 handler
