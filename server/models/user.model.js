@@ -89,7 +89,7 @@ userSchema.pre("save", async function (next) {
 
 // compare password
 // why not next() in this too?
-userScheme.methods.comparePassword = async function (enterPassword) {
+userSchema.methods.comparePassword = async function (enterPassword) {
   await bcrypt.compare(enterPassword, this.password);
 };
 

@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { ApiError } from "./error.middleware";
+import { ApiError } from "./error.middleware.js";
 
 export const isAuthenticated = async (req, res, next) => {
   try {
